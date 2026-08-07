@@ -1,4 +1,4 @@
-import { ScreenBase } from './screenBase';
+import { ScreenBase } from '../screenBase';
 import type { Screen } from '@mobilewright/core';
 
 export class HomeScreen extends ScreenBase {
