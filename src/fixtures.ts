@@ -1,5 +1,5 @@
 import { test as base } from '@mobilewright/test'
-import { ScreenManager } from './screenManager';
+import { ScreenManager } from './Screens/screenManager';
 
 type Fixtures = {
   screenManager: ScreenManager;

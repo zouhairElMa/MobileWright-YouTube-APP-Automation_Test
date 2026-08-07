@@ -1,11 +1,14 @@
 import { ScreenBase } from '../screenBase';
 import type { Screen } from '@mobilewright/core';
+import { HomeLocator } from './home.locator';
 
 export class HomeScreen extends ScreenBase {
-  private readonly youTubeApplicationIconLocator = this.screen.getByRole('text', { name: 'YouTube' });
+    
+  private readonly homeLocator: HomeLocator;
 
   constructor(screen: Screen) {
     super(screen);
+    this.homeLocator = new HomeLocator(screen);
   }
 
   async clickOnHomeButton(): Promise<void> {
@@ -13,7 +16,7 @@ export class HomeScreen extends ScreenBase {
   }
 
   async clickOnYouTubeApplicationIcon(): Promise<void> {
-    await this.clickOnApplicationIcon(this.youTubeApplicationIconLocator);
+    await this.clickOnApplicationIcon(this.homeLocator.youTubeApplicationIconLocator);
   }
 
   async middleSwipeUp(): Promise<void> {

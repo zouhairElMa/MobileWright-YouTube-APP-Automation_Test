@@ -1,5 +1,5 @@
-import { HomeScreen } from './Screens/HomeScreen';
-import { YouTubeScreen } from './Screens/youtubeScreen';
+import { HomeScreen } from './Home/home.screen';
+import { YouTubeScreen } from './YouTube/youtube.screen';
 import type { Screen } from '@mobilewright/core';
 
 export class ScreenManager {

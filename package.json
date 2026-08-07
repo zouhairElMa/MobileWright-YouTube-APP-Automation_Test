@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "@mobilewright/test": "0.0.51",
+    "mobilewright": "0.0.51",
+    "@types/node": "latest"
+  }
+}
