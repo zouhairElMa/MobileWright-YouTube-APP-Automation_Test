@@ -2,17 +2,17 @@ import { test, expect } from '../src/fixtures';
 
 test('YouTube scenario', async ({ screenManager }) => {
 
-  await screenManager.OnHomeScreen().clickOnHomeButton();
-  await screenManager.OnHomeScreen().middleSwipeUp();
-  await screenManager.OnHomeScreen().clickOnYouTubeApplicationIcon();
-  await screenManager.OnHomeScreen().bottomSwipeUp();
-  await screenManager.OnHomeScreen().middleSwipeUp();
-  await screenManager.OnHomeScreen().clickOnYouTubeApplicationIcon();
-  await screenManager.OnYouTubeScreen().clickOnSearchIcon();
-  await screenManager.OnYouTubeScreen().fillSearchField('MobileWright');
-  await screenManager.OnYouTubeScreen().pressOkOnKeyboard();
-  await screenManager.OnYouTubeScreen().clickOnVideo();
-  await screenManager.OnYouTubeScreen().clickOnSkipAdButton();
-  await screenManager.OnYouTubeScreen().swipeVideoProgressSliderRight(1000);
+  await screenManager.onHomeScreen().clickOnHomeButton();
+  await screenManager.onHomeScreen().middleSwipeUp();
+  await screenManager.onHomeScreen().clickOnYouTubeApplicationIcon();
+  await screenManager.onHomeScreen().bottomSwipeUp();
+  await screenManager.onHomeScreen().middleSwipeUp();
+  await screenManager.onHomeScreen().clickOnYouTubeApplicationIcon();
+  await screenManager.onYouTubeScreen().clickOnSearchIcon();
+  await screenManager.onYouTubeScreen().fillSearchField('MobileWright');
+  await screenManager.onYouTubeScreen().pressOkOnKeyboard();
+  await screenManager.onYouTubeScreen().clickOnVideo();
+  await screenManager.onYouTubeScreen().clickOnSkipAdButton();
+  await screenManager.onYouTubeScreen().swipeVideoProgressSliderRight(1000);
 
 });

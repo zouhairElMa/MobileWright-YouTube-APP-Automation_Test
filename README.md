@@ -1,66 +1,74 @@
 ﻿# Screen Object Pattern - MobileWright Basics
 
-Ce projet montre une implémentation simple du pattern Screen Object avec MobileWright pour automatiser un scénario YouTube sur Android.
+This project demonstrates a simple implementation of the Screen Object pattern with MobileWright to automate a YouTube scenario on Android.
 
-## Prérequis
+## Prerequisites
 
-- Node.js 18+ (LTS recommandé)
+- Node.js 18+ (LTS recommended)
 - npm
-- Android Studio (ou un appareil Android connecté)
-- Un émulateur Android disponible (la config actuelle utilise Pixel_4)
+- Android Studio (or a connected Android device)
+- An available Android emulator (the current config uses Pixel_4)
 
-## 1) Cloner le projet
+## 1) Clone the project
 
 ```powershell
 git clone https://github.dxc.com/zelmattad/Screen_Object_Pattern_MobileWright_Basics.git
 cd Screen_Object_Pattern_MobileWright_Basics
 ```
 
-## 2) Installer les dépendances
+## 2) Install dependencies
 
 ```powershell
 npm install
 ```
 
-## 3) Vérifier l'environnement MobileWright
+## 3) Check the MobileWright environment
 
 ```powershell
 npx mobilewright doctor
 npx mobilewright devices
 ```
 
-Si c'est votre première exécution, installez aussi l'agent MobileWright sur l'appareil/émulateur cible:
+If this is your first run, also install the MobileWright agent on the target device/emulator:
 
 ```powershell
 npx mobilewright install
 ```
 
-## 4) Lancer les tests
+## 4) Run the tests
 
-Exécuter tous les tests:
+Run all tests:
 
 ```powershell
 npx mobilewright test
 ```
 
-Exécuter uniquement le scénario YouTube:
+Run only the YouTube scenario:
 
 ```powershell
 npx mobilewright test tests/youTubeScenario.test.ts
 ```
 
-## 5) Ouvrir le rapport
+## 5) Open the report
 
 ```powershell
 npx mobilewright show-report
 ```
 
-## Configuration utilisée
+## Configuration used
 
-La configuration est dans mobilewright.config.ts:
+The configuration lives in mobilewright.config.ts:
 
 - platform: android
 - deviceName: Pixel_4
 - timeout: 60000 ms
 
-Si vous utilisez un autre appareil/émulateur, adaptez deviceName dans ce fichier.
+If you use a different device/emulator, adjust deviceName in this file.
+
+## Documentation
+
+Two in-depth guides to the Screen Object Pattern implementation are available:
+
+- `SOP_Mobilewright_DXC_Guide_EN.pdf` — English version
+- `SOP_Mobilewright_DXC_Guide.pdf` — French version
+
