@@ -29,13 +29,13 @@ export class YouTubeScreen extends ScreenBase {
   }
 
   async clickOnSkipAdButton(): Promise<void> {
-    if (await this.youTubeLocator.skipAdButtonLocator.isVisible({ timeout: 11000 })) {
+    if (await this.youTubeLocator.skipAdButtonLocator.isVisible({timeout : 5000}) && !(await this.youTubeLocator.videoProgressSliderLocator.isVisible({timeout : 5000}))) {
       await this.clickOnApplicationIcon(this.youTubeLocator.skipAdButtonLocator);
     } else {
       console.log('Skip Ad button not found, proceeding without skipping.');
     }
   }
-
+  
   async swipeVideoProgressSliderRight(distance: number, duration?: number): Promise<void> {
     await this.swipeRightFromLocator(this.youTubeLocator.videoProgressSliderLocator, distance, duration);
   }
