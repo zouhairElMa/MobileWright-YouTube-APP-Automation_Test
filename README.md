@@ -61,7 +61,7 @@ The configuration lives in mobilewright.config.ts:
 
 - platform: android
 - deviceName: Pixel_4
-- timeout: 60000 ms
+- timeout: 6000000 ms
 
 If you use a different device/emulator, adjust deviceName in this file.
 

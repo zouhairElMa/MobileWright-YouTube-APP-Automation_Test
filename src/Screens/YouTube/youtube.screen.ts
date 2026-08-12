@@ -29,7 +29,7 @@ export class YouTubeScreen extends ScreenBase {
   }
 
   async clickOnSkipAdButton(): Promise<void> {
-    if (await this.youTubeLocator.skipAdButtonLocator.isVisible({timeout : 5000}) && !(await this.youTubeLocator.videoProgressSliderLocator.isVisible({timeout : 5000}))) {
+    if (await this.youTubeLocator.skipAdButtonLocator.isVisible({timeout : 5000}) && (await this.youTubeLocator.videoProgressSliderLocator.waitFor({state: 'disabled',timeout : 5000}))) {
       await this.clickOnApplicationIcon(this.youTubeLocator.skipAdButtonLocator);
     } else {
       console.log('Skip Ad button not found, proceeding without skipping.');
@@ -39,4 +39,29 @@ export class YouTubeScreen extends ScreenBase {
   async swipeVideoProgressSliderRight(distance: number, duration?: number): Promise<void> {
     await this.swipeRightFromLocator(this.youTubeLocator.videoProgressSliderLocator, distance, duration);
   }
+
+  async swipeDownOnVideo(): Promise<void> {
+    await this.swipeDownFromLocator(this.youTubeLocator.screenVideo, 300);
+  }
+
+  async swipeDownOnMiniScreenVideo(): Promise<void> {
+    await this.swipeDownFromLocator(this.youTubeLocator.miniScreenVideo, 300);
+  }
+
+  async clickOnShortVideoButton(): Promise<void> {
+    await this.clickOnApplicationIcon(this.youTubeLocator.shortVideoButtonLocator);
+  }
+
+  async clickOnShortVideo(): Promise<void> {
+    await this.clickOnApplicationIcon(this.youTubeLocator.shortVideoLocator);
+  }
+
+  async swipeShortVideoProgressSliderRight(distance: number, duration?: number): Promise<void> {
+    await this.swipeRightFromLocator(this.youTubeLocator.videoProgressSliderLocator, distance, duration);
+  }
+
+  async swipeUpOnShortVideo(): Promise<void> {
+    await this.swipeUpFromLocator(this.youTubeLocator.shortVideoLocator, 300);
+  }
+
 }
