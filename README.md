@@ -46,7 +46,7 @@ npx mobilewright test
 Run only the YouTube scenario:
 
 ```powershell
-npx mobilewright test tests/youTubeScenario.test.ts
+npm tun test:youtubeRegression
 ```
 
 ## 5) Open the report
