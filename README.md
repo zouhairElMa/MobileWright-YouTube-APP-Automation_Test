@@ -12,8 +12,8 @@ This project demonstrates a simple implementation of the Screen Object pattern w
 ## 1) Clone the project
 
 ```powershell
-git clone https://github.dxc.com/zelmattad/Screen_Object_Pattern_MobileWright_Basics.git
-cd Screen_Object_Pattern_MobileWright_Basics
+git clone https://github.com/zouhairElMa/MobileWright-YouTube-APP-Automation_Test.git
+cd MobileWright-YouTube-APP-Automation_Test
 ```
 
 ## 2) Install dependencies
@@ -46,7 +46,7 @@ npx mobilewright test
 Run only the YouTube scenario:
 
 ```powershell
-npm tun test:youtubeRegression
+npm run test:youtubeRegression
 ```
 
 ## 5) Open the report
@@ -64,11 +64,4 @@ The configuration lives in mobilewright.config.ts:
 - timeout: 6000000 ms
 
 If you use a different device/emulator, adjust deviceName in this file.
-
-## Documentation
-
-Two in-depth guides to the Screen Object Pattern implementation are available:
-
-- `SOP_Mobilewright_DXC_Guide_EN.pdf` — English version
-- `SOP_Mobilewright_DXC_Guide.pdf` — French version
 

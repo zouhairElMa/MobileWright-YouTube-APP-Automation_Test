@@ -2,3 +2,5 @@
 /mobilewright-report
 /test-results
 *.tex
+.DS_Store
+*DXC*
